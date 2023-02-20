@@ -1,31 +1,26 @@
 {
-  "name": "text-editor",
-  "description": "a Progressive Web App",
+  "name": "JATE",
   "version": "1.0.0",
-  "main": "index.js",
-  "dependencies": {
-    "express": "^4.18.2",
-    "idb": "^7.1.1"
-  },
+  "description": "",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/carrieky04/Text-Editor.git"
+    "start:dev": "concurrently \"cd client && npm run start\" \"cd server && npm run dev\" ",
+    "start": "npm run build && cd server && node server.js",
+    "start:prod": "npm run start",
+    "server": "cd server node server.js --ignore client",
+    "build": "cd client && npm run build",
+    "install": "cd server && npm i && cd ../client && npm i",
+    "client": "cd client && npm start"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/carrieky04/Text-Editor/issues"
+  "dependencies": {
+    "express": "^4.17.1",
+    "if-env": "^1.0.4"
   },
-  "homepage": "https://github.com/carrieky04/Text-Editor#readme",
   "devDependencies": {
-    "concurrently": "^7.6.0",
-    "nodemon": "^2.0.20",
-    "webpack": "^5.75.0",
-    "webpack-cli": "^5.0.1"
+    "concurrently": "^5.2.0",
+    "nodemon": "^2.0.4"
   }
 }

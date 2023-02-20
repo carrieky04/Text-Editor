@@ -19,4 +19,3 @@ export const putDb = async (content) => console.error('putDb not implemented');
 export const getDb = async () => console.error('getDb not implemented');
 
 initdb();
-

@@ -10,4 +10,3 @@ just another text editor
 `;
 
 export { header };
-
